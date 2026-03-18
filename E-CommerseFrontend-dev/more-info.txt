@@ -1,0 +1,4 @@
+Welcome to my fist web-based
+here i am only building a web page using HTML, CSS, and some related tools
+to make a frontend UI.
+    i will building this from scratch
