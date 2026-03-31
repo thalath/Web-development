@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORM | L3oN</title>
+
+    <style>
+        fieldset, input, textarea{
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- sematic form header -->
+    <header>
+        <h1>Content of MTML FORM</h1>
+    </header>
+
+    <!-- main content -->
+    <main>
+        <form action="./create_page.html" method="post">
+            <h2>Member Registration</h2>
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="John Doe">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="johndoe@gmail.com">
+                </div>
+
+                <div>
+                    <label>Gender: </label>
+                    <label for="male">Male</label>
+                    <input type="radio" name="male" id="male">
+                    <label for="female">female</label>
+                    <input type="radio" name="female" id="female">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Membership</legend>
+                <label for="member-type">Choosing the option to payment:</label>
+                <select name="" id="member-type">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Cambodia">Cambodia</option>
+                </select>
+                <div>
+                    <label for="receive">Receive update and alert: </label>
+                    <input type="checkbox" name="receive" id="receive">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="note">Note:</label>
+                <textarea name="note" id="note" cols="20" rows="10"></textarea>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Active</legend>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <!-- foot content -->
+    <footer>
+        <p>Copyright &copy; 2026 All right. Reserved</p>
+    </footer>
+
+</body>
+</html>
