@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-container {
+    background-image: url('/homework3/assets/backgroup.jpg');
+    background-size: cover;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+svg path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-dasharray: 470;
+    stroke-dashoffset: 470;
+    animation: textAnimation 5s ease-in-out infinite;
+}
+
+@keyframes textAnimation {
+    0% {
+        stroke-dashoffset: 470;
+    }
+
+    80% {
+        fill: transparent;
+    }
+    100% {
+        fill: #fff;
+        stroke-dashoffset: 0;
+    }
+}
+
+.right-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.right-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button{
+    padding: 15px;
+    width: 500px;
+    margin: 5px 0px;
+    border-radius: 15px;
+
+}
+
+.forget-acc {
+    padding: 15px;
+    width: 500px;
+    margin: 5px 0px;
+    border-radius: 15px;
+    text-align: center
+}
+
+.create-acc {
+    padding: 15px;
+    width: 500px;
+    margin: 10px 0px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.create-acc a {
+    color: white;
+    text-decoration: none;
+}
