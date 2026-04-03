@@ -63,7 +63,17 @@ input, button{
     width: 500px;
     margin: 5px 0px;
     border-radius: 15px;
+    border: none;
+}
 
+button {
+    background-color: rgb(43, 76, 226);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.01) translateY(-3px);
 }
 
 .forget-acc {
@@ -71,7 +81,12 @@ input, button{
     width: 500px;
     margin: 5px 0px;
     border-radius: 15px;
-    text-align: center
+    text-align: center;
+    
+}
+
+.forget-acc a {
+    text-decoration: none;
 }
 
 .create-acc {
@@ -81,9 +96,40 @@ input, button{
     border-radius: 15px;
     text-align: center;
     background-color: rgba(0,0,0, 0.3);
+    transition: all 0.3s ease;
 }
+
 
 .create-acc a {
     color: white;
     text-decoration: none;
+}
+
+.create-acc:hover {
+    background-color: rgba(0,0,0, 0.5);
+    box-shadow: 0 0 10px rgba(171, 101, 101, 0.5);
+    transform: translateY(-5px);
+}
+
+.router {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.router a{
+    text-decoration: none;
+    background-color: rgb(13, 55, 153);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.router a:hover {
+
+    box-shadow: 0 0 20px 5px rgba(0,0,0, 0.3);
 }
