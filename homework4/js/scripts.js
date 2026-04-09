@@ -38,10 +38,13 @@ const gridItems = document.querySelectorAll('.grid-items')
 gridItems.forEach(e => {
     e.addEventListener('click', function() {
         const originalColors = this.style.backgroundColor;
+        const text = this.innerText;
     
         this.style.backgroundColor = "tomato";
+        this.innerText = "Bomb...!";
         setTimeout(() => {
             this.style.backgroundColor = originalColors;
+            this.innerText = text;
         }, 3000);
     });
 });
