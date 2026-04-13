@@ -1,17 +1,9 @@
-const btn = document.querySelector('button');
+const active = document.querySelectorAll('.navbar ul li');
 
-btn.addEventListener('click', function(){
-    if (btn.style.backgroundColor === 'rgba(0, 0, 255, 0.6)'){
-        btn.style.backgroundColor = 'black';
-        btn.style.color = 'white';
-    }
-    else {
-        btn.style.backgroundColor = 'rgba(0, 0, 255, 0.6)';
-        btn.style.color = '#f9f9f9';
-    }
+active.forEach(links => {
+    links.addEventListener('click', function(){
+        active.forEach(x => x.classList.remove('active'));
 
-});
-btn.addEventListener('dblclick', function(){
-    btn.style.backgroundColor = 'rgba(0, 0, 255, 0.6)';
-    btn.style.color = '#f9f9f9';
+        this.classList.add('active');
+    });
 });
