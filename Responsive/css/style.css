@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-container div {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.grid-container div:nth-child(odd) {
+    background-color: lightgray;
+}
+
+.grid-container div img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: lightgreen;
+        font-size: 14px
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}

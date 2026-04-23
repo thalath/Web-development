@@ -1,30 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Homework</title>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      min-height: 44px; /* touch-friendly */
+      display: flex;
+      align-items: center;
+    }
+
+    .hamburger {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .nav-active {
+      display: flex;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #f4f4f4;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+
+    .btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      min-height: 44px; /* touch-friendly */
+      cursor: pointer;
+    }
+
+    /* PROJECT GRID */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .card {
+      background: #ddd;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    /* TABLET */
+    @media (min-width: 768px) {
+      .projects {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* DESKTOP */
+    @media (min-width: 1024px) {
+      .hamburger {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex !important;
+        flex-direction: row;
+      }
+
+      .projects {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <aside class="navbar">
-        <div>
-            <h2><i class="fas fa-code"></i> L3oN</h2>
-            <h3>Student Potal</h3>
-            <ul>
-                <li class="active"><i class="fas fa-table"></i> <a href="">Dashboard</a></li>
-                <li><i class="fas fa-calendar"></i> <a href="">Timetable</a></li>
-                <li><i class="fa fa-bed"></i> <a href="">Classroom</a></li>
-                <li><i class="fas fa-check-square"></i> <a href="">Assessments</a></li>
-                <li><i class="fas fa-building"></i> <a href="">Academic</a></li>
-                <li><i class="fas fa-gear"></i> <a href="">Settings</a></li>
-            </ul>
-        </div>
-            <div>
-                More Info Extends Here
-            </div>
-    </aside>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">MySite</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Welcome to My Website</h1>
+    <p>This is a responsive hero section with scalable text.</p>
+    <button class="btn">Get Started</button>
+  </section>
+
+  <!-- PROJECT GRID -->
+  <section class="projects">
+    <div class="card">Project 1</div>
+    <div class="card">Project 2</div>
+    <div class="card">Project 3</div>
+    <div class="card">Project 4</div>
+    <div class="card">Project 5</div>
+    <div class="card">Project 6</div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("nav-active");
+    }
+  </script>
+
 </body>
-<script src="./scripts.js"></script>
 </html>
