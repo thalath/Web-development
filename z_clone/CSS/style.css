@@ -1,0 +1,443 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+/* Background filtering and coloring block */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    90deg,
+    rgb(8, 8, 67),
+    rgb(5, 1, 18),
+    rgb(8, 8, 67)
+  );
+}
+
+.parent {
+  width: 80%;
+  min-height: 90vh;
+  background-color: #230845;
+  box-shadow: 5px 5px 20px black;
+  color: #ffffff;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Logo design */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* Navigationbar */
+.parent nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  height: 15%;
+  /* background-color: plum; */
+  /* background-color: plum; */
+}
+
+nav h1 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #13e988;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  transition: 0.5s ease;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+ul li #sub {
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(90deg, #c04848, #480048, #c04848);
+  margin: 10px;
+  padding: 10px 30px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  border-radius: 20px;
+}
+
+ul li #sub:hover {
+  background-position: right center;
+}
+
+/* main content */
+.parent main {
+  display: flex;
+  height: 85%;
+}
+
+/* Hero block */
+.hero {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  transform: none;
+}
+
+
+
+/* right block (typography) */
+main .right {
+  width: 50%;
+  height: 100%;
+  padding: 40px 80px;
+}
+
+.right h3 {
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.right h1 {
+  font-size: 55px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+.right h1 span {
+  color: yellow;
+}
+
+.right p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.right h2 {
+  text-decoration: underline;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.right button {
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  background-color: #033677;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.right button:hover {
+  background-color: rgb(42, 0, 93);
+  box-shadow: 0 0 10px white;
+}
+
+.grid-container {
+  width: 80%;
+  display: grid;
+  gap: 30px;
+  padding: 40px;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+
+/* Card Block */
+
+.grid-container .card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card-header {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100px;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.card-body button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Colors */
+.purple .card-header {
+  background: #c9a7eb;
+}
+.red .card-header {
+  background: #ff7b7b;
+}
+.green .card-header {
+  background: #6edc8c;
+}
+.yellow .card-header {
+  background: #ffd166;
+}
+
+.purple button {
+  background: #c9a7eb;
+  color: white;
+}
+.red button {
+  background: #ff7b7b;
+  color: white;
+}
+.green button {
+  background: #6edc8c;
+  color: white;
+}
+.yellow button {
+  background: #ffd166;
+  color: white;
+}
+
+.card-parent {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (320px <= width <= 768px) {
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+      90deg,
+      rgb(8, 8, 67),
+      rgb(5, 1, 18),
+      rgb(8, 8, 67)
+    );
+  }
+
+  .parent {
+    width: 95%;
+    height: auto;
+    position: static;
+    transform: none;
+  }
+
+  /* NAV */
+  nav {
+    padding: 20px;
+  }
+
+  nav .logo h1 {
+    display: none;
+  }
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 200px;
+    background: #230845;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    border-radius: 10px;
+  }
+
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* MAIN STACK */
+  main {
+    flex-direction: column;
+  }
+
+  .hero {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero img {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+
+    transform: none;
+  }
+
+  main .right {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center; /* horizontal center */
+
+    text-align: center;
+  }
+
+  .right h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .right h3 {
+    font-size: 18px;
+  }
+
+  .right p {
+    font-size: 13px;
+    max-width: 300px; /* keeps text readable */
+  }
+
+  .right button {
+    margin-top: 20px;
+  }
+
+
+  /* CARDS */
+  .grid-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+@media ( 768px <= width <= 1024px)
+{
+
+  .hero {
+    width: 45%;
+  }
+
+  .hero img {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .parent {
+    width: 90%;
+  }
+
+  
+
+
+  .right {
+    width: 50%;
+  }
+
+  .right  h3 {
+    font-size: 20px;
+  }
+
+  .right h1 {
+    font-size: 45px;
+    max-width: 1000px;
+  }
+
+  .right button {
+    margin-top: 25px;
+  }
+  
+
+  nav ul li a {
+    font-size: 11px;
+  }
+
+  nav h1 {
+    display: none;
+  }
+
+  .grid-container {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
+}
